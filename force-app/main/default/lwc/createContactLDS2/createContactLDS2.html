@@ -1,0 +1,23 @@
+<!--author Rao-->
+<template>
+        <lightning-card title="Contact Manger">
+            <lightning-layout>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-card title="Create A New Contact">
+                        <lightning-input name="Contact Name" label="Name" onchange={contactNameChangeHandler}></lightning-input>
+                        <lightning-input name="Contact Email"  label="Email" onchange={contactEmailChangeHandler}></lightning-input>
+                        <lightning-input name="Contact Phone" label="Phone" onchange={contactPhoneChangeHandler}></lightning-input>
+                    </br>
+                    <lightning-button label="Create Contact" onclick={createContact} variant="brand"></lightning-button>
+                    </lightning-card>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" padding="around-small">
+                    <lightning-card title="View Contact Record">
+                        <p><lightning-formatted-text value={retContactName}></lightning-formatted-text></p>
+                        <p><lightning-formatted-email value={retContactEmail}></lightning-formatted-email></p>
+                        <p><lightning-formatted-phone value={retContactPhone}></lightning-formatted-phone></p>
+                    </lightning-card>
+                </lightning-layout-item>
+           </lightning-layout>
+        </lightning-card>
+</template>
